@@ -244,20 +244,16 @@ section .title::after {
     background: none;
 }
 
-.services,
-.contact {
-    background: #111;
-    color: #fff;
+.services {
+    background: lightgray;
 }
 
-.services .title::before,
-.contact .title::before {
-    background: #fff;
+.services .title::before {
+    background: #111;
 }
 
-.services .title::after,
-.contact .title::after {
-    background: #111;
+.services .title::after {
+    background: lightgray;
 }
 
 .services .title::after {
@@ -280,7 +276,8 @@ section .title::after {
 .services .services-content .card-row .card {
     flex-basis: calc(100% / 2);
     margin-left: 8px;
-    background: #222;
+    background: #111;
+    color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
@@ -318,8 +315,12 @@ section .title::after {
     margin-top: 10px;
 }
 
+.skills {
+    background: burlywood;      
+}
 .skills .title::after {
     content: 'What I know';
+    background: burlywood;
 }
 
 .skills .skills-content .column {
@@ -377,20 +378,23 @@ section .title::after {
 }
 
 .skills-content .right .sass::before {
-    width: 20%
+    width: 10%
 }
 
 .skills-content .right .js::before {
-    width: 10%
+    width: 5%
 }
 
 .skills-content .right .rwd::before {
     width: 55%
 }
 
-
+.contact {
+    background: skyblue;
+}
 .contact .title::after {
     content: 'Get in touch';
+    background: skyblue;
 }
 
 .contact .contact-content {
@@ -425,9 +429,8 @@ section .title::after {
     font-weight: 300;
 }
 
-.contact .contact-content .info .sub-title,
 .contact .contact-content .info .sub-title a {
-    color: #fff;
+    color: #111;
 }
 
 
