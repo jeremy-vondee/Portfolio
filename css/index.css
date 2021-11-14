@@ -594,10 +594,10 @@ section .title::after {
             transform: translate(0%);
   }
   .navbar.sticky .menu {
-    top: 70px;
+    top: 55px;
   }
   .navbar.sticky {
-    height: 70px;
+    height: 55px;
   }
   @-webkit-keyframes navLinkFade {
     from {
@@ -737,7 +737,6 @@ section .title::after {
   }
   .contact .contact-content .info .sub-title,
   .contact .contact-content .info .sub-title a {
-    color: #fff;
     font-weight: 350;
   }
   .projects .project-content .left img {

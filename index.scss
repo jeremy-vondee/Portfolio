@@ -524,12 +524,12 @@ section .title::after {
     }
 
     .navbar.sticky .menu {
-        top: 70px;
+        top: 55px;
         
     }
 
     .navbar.sticky {
-        height: 70px;
+        height: 55px;
     }
 
     @keyframes navLinkFade {
@@ -664,15 +664,6 @@ section .title::after {
         padding: 0;
     }
 
-    // .navbar .menu {
-    //     width: 50%;
-    //     top: 7.3vh
-    // }
-
-    // .navbar.sticky .menu {
-    //     top: 11vh;
-    // }
-
     .about .about-content .right .text {
         font-size: 18px;
     }
@@ -688,7 +679,6 @@ section .title::after {
 
     .contact .contact-content .info .sub-title,
     .contact .contact-content .info .sub-title a {
-        color: #fff;
         font-weight: 350;
     }
 
