@@ -23,7 +23,7 @@ body {
   position: fixed;
   width: 100%;
   padding: 30px 0;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: 999;
@@ -31,7 +31,7 @@ body {
 
 .navbar.sticky {
   background: crimson;
-  padding: 15px 0;
+  padding: 15px 15pxs;
 }
 
 .navbar .max-width {
@@ -154,7 +154,7 @@ section {
 .skills,
 .contact,
 .projects {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 section .title {
@@ -164,11 +164,11 @@ section .title {
   font-weight: 500;
   margin-bottom: 60px;
   padding-bottom: 20px;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
 }
 
 section .title::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -195,7 +195,7 @@ section .title::after {
 }
 
 .about .title::after {
-  content: 'Who I am';
+  content: "Who I am";
 }
 
 .about .about-content,
@@ -239,7 +239,7 @@ section .title::after {
 }
 
 .about .about-content .right .text {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -288,7 +288,7 @@ section .title::after {
 }
 
 .services .title::after {
-  content: 'What I do';
+  content: "What I do";
 }
 
 .services .services-content {
@@ -374,7 +374,7 @@ section .title::after {
 }
 
 .skills .title::after {
-  content: 'What I know';
+  content: "What I know";
   background: burlywood;
 }
 
@@ -422,7 +422,7 @@ section .title::after {
 }
 
 .skills .skills-content .right .line::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   top: 0;
@@ -455,7 +455,7 @@ section .title::after {
 }
 
 .contact .title::after {
-  content: 'Get in touch';
+  content: "Get in touch";
   background: skyblue;
 }
 
@@ -548,7 +548,10 @@ section .title::after {
 
 @media screen and (max-width: 991px) {
   .navbar {
-    padding: 0 50px;
+    padding: 15px 35px;
+  }
+  .navbar.sticky {
+    padding: 15px 35px;
   }
 }
 
@@ -684,7 +687,13 @@ section .title::after {
 
 @media screen and (max-width: 690px) {
   .max-width {
-    padding: 0 23px;
+    padding: 15px 23px;
+  }
+  .navbar {
+    padding: 1px 35px;
+  }
+  .navbar.sticky {
+    padding: 1px 35px;
   }
   .home .home-content .text-2 {
     font-size: 60px;
@@ -723,7 +732,10 @@ section .title::after {
 
 @media screen and (max-width: 400px) {
   .navbar {
-    padding: 0;
+    padding: 1px 35px;
+  }
+  .navbar.sticky {
+    padding: 1px 35px;
   }
   .about .about-content .right .text {
     font-size: 18px;
