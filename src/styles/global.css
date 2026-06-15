@@ -174,3 +174,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes grid {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(40px, 40px); }
+}
+
+.animate-grid {
+  animation: grid 10s linear infinite;
+}
