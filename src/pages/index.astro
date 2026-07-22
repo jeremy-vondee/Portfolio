@@ -3,10 +3,33 @@ import "../styles/global.css"
 import Layout from "@/Layout/Layout.astro"
 import Header from "@/components/Header"
 import { Button } from "@/components/ui/button"
+import { HugeiconsIcon } from "@hugeicons/react"
+import {
+    WhatsappIcon,
+    TwitterIcon,
+    InstagramIcon,
+    GithubIcon,
+    Email,
+} from "@hugeicons/core-free-icons"
+import Particles from "@/components/Particles"
 ---
 
 <Layout title="Juinor UI/UX Designer & Frontend Developer Portfolio">
     <Header client:load />
+    <Particles
+        client:load
+        particleCount={230}
+        particleSpread={8}
+        speed={0.11}
+        particleColors={["#0a3d9e"]}
+        moveParticlesOnHover={false}
+        alphaParticles={false}
+        particleBaseSize={100}
+        sizeRandomness={1}
+        cameraDistance={10}
+        disableRotation={true}
+    />
+
     <section class="mx-auto max-w-6xl px-4 pt-24 sm:pt-32 md:pt-40 lg:pt-48">
         <div class="text-center md:text-left">
             <div
@@ -52,7 +75,9 @@ import { Button } from "@/components/ui/button"
             </div>
         </div>
     </section>
-    <section class="mx-auto max-w-6xl px-4 py-20 sm:py-28 md:py-36 lg:py-44">
+    <section
+        id="about"
+        class="mx-auto max-w-6xl px-4 py-20 sm:py-28 md:py-36 lg:py-44">
         <div class="text-center mb-8 sm:mb-10">
             <h2
                 class="font-bold font-mono inline-block border-b-2 border-black pb-2 text-2xl sm:text-3xl">
@@ -61,7 +86,9 @@ import { Button } from "@/components/ui/button"
         </div>
     </section>
 
-    <section class="mx-auto max-w-6xl px-4 py-20 sm:py-28 md:py-36 lg:py-44">
+    <section
+        id="projects"
+        class="mx-auto max-w-6xl px-4 py-20 sm:py-28 md:py-36 lg:py-44">
         <div class="text-center mb-8 sm:mb-10">
             <h2
                 class="font-bold font-mono inline-block border-b-2 border-black pb-2 text-2xl sm:text-3xl">
@@ -70,12 +97,82 @@ import { Button } from "@/components/ui/button"
         </div>
     </section>
 
-    <section class="mx-auto max-w-6xl px-4 py-20 sm:py-28 md:py-36 lg:py-44">
+    <section
+        id="contacts"
+        class="mx-auto max-w-6xl px-4 py-20 sm:py-28 md:py-36 lg:py-44">
         <div class="text-center mb-8 sm:mb-10">
             <h2
                 class="font-bold font-mono inline-block border-b-2 border-black pb-2 text-2xl sm:text-3xl">
                 Contacts
             </h2>
+        </div>
+        <div class="flex justify-around">
+            <a
+                href="https://wa.me/15551234567"
+                target="_blank"
+                rel="noreferrer">
+                <div class="flex content-center items-center flex-col gap-4">
+                    <HugeiconsIcon
+                        icon={WhatsappIcon}
+                        className="size-5 sm:size-6 md:size-7 lg:size-8"
+                        color="currentColor"
+                        strokeWidth={1.5}
+                    />
+                    <span class="hidden md:block text-sm md:text-base"
+                        >Whatsapp</span
+                    >
+                </div>
+            </a>
+            <a href="https://wa.me/15551234567">
+                <div class="flex content-center items-center flex-col gap-4">
+                    <HugeiconsIcon
+                        icon={InstagramIcon}
+                        className="size-5 sm:size-6 md:size-7 lg:size-8"
+                        color="currentColor"
+                        strokeWidth={1.5}
+                    />
+                    <span class="hidden md:block text-sm md:text-base"
+                        >Instagram</span
+                    >
+                </div>
+            </a>
+            <a href="https://wa.me/15551234567">
+                <div class="flex content-center items-center flex-col gap-4">
+                    <HugeiconsIcon
+                        icon={TwitterIcon}
+                        className="size-5 sm:size-6 md:size-7 lg:size-8"
+                        color="currentColor"
+                        strokeWidth={1.5}
+                    />
+                    <span class="hidden md:block text-sm md:text-base">X</span>
+                </div>
+            </a>
+            <a href="https://github.com/jeremy-vondee">
+                <div class="flex content-center items-center flex-col gap-4">
+                    <HugeiconsIcon
+                        icon={GithubIcon}
+                        className="size-5 sm:size-6 md:size-7 lg:size-8"
+                        color="currentColor"
+                        strokeWidth={1.5}
+                    />
+                    <span class="hidden md:block text-sm md:text-base"
+                        >Github</span
+                    >
+                </div>
+            </a>
+            <a href="mailto:jeremynarteyodonkor@gmail.com">
+                <div class="flex content-center items-center flex-col gap-4">
+                    <HugeiconsIcon
+                        icon={Email}
+                        className="size-5 sm:size-6 md:size-7 lg:size-8"
+                        color="currentColor"
+                        strokeWidth={1.5}
+                    />
+                    <span class="hidden md:block text-sm md:text-base"
+                        >Gmail</span
+                    >
+                </div>
+            </a>
         </div>
     </section>
 </Layout>
