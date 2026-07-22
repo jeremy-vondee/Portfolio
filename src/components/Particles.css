@@ -1,0 +1,9 @@
+.particles-container {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh; /* modern browsers – correct mobile viewport */
+  pointer-events: none;
+  z-index: -1;
+}
