@@ -59,19 +59,26 @@ import Particles from "@/components/Particles"
 
             <div
                 class="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button
-                    variant="link"
-                    type="button"
-                    className="bg-primary text-white p-5 rounded-sm hover:no-underline focus:ring-0 focus:outline-none">
-                    View My Work
-                </Button>
+                <a href="#projects" class="cursor-pointer">
+                    <Button
+                        variant="link"
+                        type="button"
+                        className="cursor-pointer bg-primary text-white p-5 rounded-sm hover:no-underline focus:ring-0 focus:outline-none">
+                        View My Work
+                    </Button>
+                </a>
 
-                <Button
-                    variant="outline"
-                    type="button"
-                    className="text-primary border-primary p-5 rounded-sm hover:text-primary focus:ring-0 focus:outline-none focus:border-0">
-                    View My Resume
-                </Button>
+                <a
+                    href="/jeremy-resume.pdf"
+                    download="Jeremy-resume.pdf"
+                    class="cursor-pointer">
+                    <Button
+                        variant="outline"
+                        type="button"
+                        className="cursor-pointer text-primary border-primary p-5 rounded-sm hover:text-primary focus:ring-0 focus:outline-none focus:border-0">
+                        View My Resume
+                    </Button>
+                </a>
             </div>
         </div>
     </section>
