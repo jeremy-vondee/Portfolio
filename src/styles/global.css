@@ -183,3 +183,7 @@
 .animate-grid {
   animation: grid 10s linear infinite;
 }
+
+html {
+  scroll-behavior: smooth;
+}
