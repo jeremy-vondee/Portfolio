@@ -43,7 +43,7 @@ const Header = () => {
                         onCloseAutoFocus={(e) => e.preventDefault()}>
                         <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
                             <a
-                                href="/about"
+                                href="#about"
                                 className="flex items-center gap-3 w-full py-1 px-2 rounded transition-colors hover:bg-white/10 focus:bg-white/10 outline-none">
                                 <HugeiconsIcon
                                     icon={User02Icon}
@@ -55,7 +55,7 @@ const Header = () => {
                         </DropdownMenuItem>
                         <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
                             <a
-                                href="/skills"
+                                href="#skills"
                                 className="flex items-center gap-3 w-full py-1 px-2 rounded transition-colors hover:bg-white/10 focus:bg-white/10 outline-none">
                                 <HugeiconsIcon
                                     icon={SparklesIcon}
@@ -67,7 +67,7 @@ const Header = () => {
                         </DropdownMenuItem>
                         <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
                             <a
-                                href="/projects"
+                                href="#projects"
                                 className="flex items-center gap-3 w-full py-1 px-2 rounded transition-colors hover:bg-white/10 focus:bg-white/10 outline-none">
                                 <HugeiconsIcon
                                     icon={Briefcase01Icon}
@@ -79,7 +79,7 @@ const Header = () => {
                         </DropdownMenuItem>
                         <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
                             <a
-                                href="/contacts"
+                                href="#contacts"
                                 className="flex items-center gap-3 w-full py-1 px-2 rounded transition-colors hover:bg-white/10 focus:bg-white/10 outline-none">
                                 <HugeiconsIcon
                                     icon={Mail01Icon}
@@ -95,10 +95,10 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex bg-primary text-white font-medium rounded-md px-4 py-3 gap-6 shadow-md">
-                <a href="/about">About</a>
-                <a href="/skills">Skills</a>
-                <a href="/projects">Projects</a>
-                <a href="/contacts">Contacts</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contacts">Contacts</a>
             </nav>
         </header>
     )
