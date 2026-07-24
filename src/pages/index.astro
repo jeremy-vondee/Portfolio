@@ -3,16 +3,37 @@ import "../styles/global.css"
 import Layout from "@/Layout/Layout.astro"
 import Header from "@/components/Header"
 import { Button } from "@/components/ui/button"
-import { HugeiconsIcon } from "@hugeicons/react"
-import {
-    WhatsappIcon,
-    TwitterIcon,
-    InstagramIcon,
-    GithubIcon,
-    Email,
-} from "@hugeicons/core-free-icons"
 import Particles from "@/components/Particles"
+import About from "@/components/About"
+import Contacts from "@/components/Contacts"
 ---
+
+<script is:inline>
+    const getThemePreference = () => {
+        if (
+            typeof localStorage !== "undefined" &&
+            localStorage.getItem("theme")
+        ) {
+            return localStorage.getItem("theme")
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light"
+    }
+    const isDark = getThemePreference() === "dark"
+    document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+
+    if (typeof localStorage !== "undefined") {
+        const observer = new MutationObserver(() => {
+            const isDark = document.documentElement.classList.contains("dark")
+            localStorage.setItem("theme", isDark ? "dark" : "light")
+        })
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["class"],
+        })
+    }
+</script>
 
 <Layout title="Juinor UI/UX Designer & Frontend Developer Portfolio">
     <Header client:load />
@@ -24,8 +45,8 @@ import Particles from "@/components/Particles"
         particleColors={["#0a3d9e"]}
         moveParticlesOnHover={false}
         alphaParticles={false}
-        particleBaseSize={100}
-        sizeRandomness={1}
+        particleBaseSize={90}
+        sizeRandomness={0.5}
         cameraDistance={10}
         disableRotation={true}
     />
@@ -82,104 +103,18 @@ import Particles from "@/components/Particles"
             </div>
         </div>
     </section>
-    <section
-        id="about"
-        class="mx-auto max-w-6xl px-4 py-20 sm:py-28 md:py-36 lg:py-44">
-        <div class="text-center mb-8 sm:mb-10">
-            <h2
-                class="font-bold font-mono inline-block border-b-2 border-black pb-2 text-2xl sm:text-3xl">
-                About Me
-            </h2>
-        </div>
-    </section>
+    <About />
 
     <section
         id="projects"
-        class="mx-auto max-w-6xl px-4 py-20 sm:py-28 md:py-36 lg:py-44">
+        class="mx-auto max-w-6xl px-4 pt-12 sm:pt-16 md:pt-20 lg:pt-24">
         <div class="text-center mb-8 sm:mb-10">
             <h2
-                class="font-bold font-mono inline-block border-b-2 border-black pb-2 text-2xl sm:text-3xl">
+                class="font-bold font-mono inline-block border-b-2 border-black dark:border-white pb-2 text-2xl sm:text-3xl">
                 Projects
             </h2>
         </div>
     </section>
 
-    <section
-        id="contacts"
-        class="mx-auto max-w-6xl px-4 py-20 sm:py-28 md:py-36 lg:py-44">
-        <div class="text-center mb-8 sm:mb-10">
-            <h2
-                class="font-bold font-mono inline-block border-b-2 border-black pb-2 text-2xl sm:text-3xl">
-                Contacts
-            </h2>
-        </div>
-        <div class="flex justify-around">
-            <a
-                href="https://wa.me/15551234567"
-                target="_blank"
-                rel="noreferrer">
-                <div class="flex content-center items-center flex-col gap-4">
-                    <HugeiconsIcon
-                        icon={WhatsappIcon}
-                        className="size-5 sm:size-6 md:size-7 lg:size-8"
-                        color="currentColor"
-                        strokeWidth={1.5}
-                    />
-                    <span class="hidden md:block text-sm md:text-base"
-                        >Whatsapp</span
-                    >
-                </div>
-            </a>
-            <a href="https://wa.me/15551234567">
-                <div class="flex content-center items-center flex-col gap-4">
-                    <HugeiconsIcon
-                        icon={InstagramIcon}
-                        className="size-5 sm:size-6 md:size-7 lg:size-8"
-                        color="currentColor"
-                        strokeWidth={1.5}
-                    />
-                    <span class="hidden md:block text-sm md:text-base"
-                        >Instagram</span
-                    >
-                </div>
-            </a>
-            <a href="https://wa.me/15551234567">
-                <div class="flex content-center items-center flex-col gap-4">
-                    <HugeiconsIcon
-                        icon={TwitterIcon}
-                        className="size-5 sm:size-6 md:size-7 lg:size-8"
-                        color="currentColor"
-                        strokeWidth={1.5}
-                    />
-                    <span class="hidden md:block text-sm md:text-base">X</span>
-                </div>
-            </a>
-            <a href="https://github.com/jeremy-vondee">
-                <div class="flex content-center items-center flex-col gap-4">
-                    <HugeiconsIcon
-                        icon={GithubIcon}
-                        className="size-5 sm:size-6 md:size-7 lg:size-8"
-                        color="currentColor"
-                        strokeWidth={1.5}
-                    />
-                    <span class="hidden md:block text-sm md:text-base"
-                        >Github</span
-                    >
-                </div>
-            </a>
-            <a href="mailto:jeremynarteyodonkor@gmail.com">
-                <div class="flex content-center items-center flex-col gap-4">
-                    <HugeiconsIcon
-                        icon={Email}
-                        className="size-5 sm:size-6 md:size-7 lg:size-8"
-                        color="currentColor"
-                        strokeWidth={1.5}
-                    />
-                    <span class="hidden md:block text-sm md:text-base"
-                        >Gmail</span
-                    >
-                </div>
-            </a>
-        </div>
-    </section>
+    <Contacts />
 </Layout>
