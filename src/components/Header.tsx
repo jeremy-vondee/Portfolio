@@ -40,13 +40,13 @@ const Header = () => {
                                     <HugeiconsIcon
                                         icon={Menu01Icon}
                                         size={22}
-                                        color="currentColor"
+                                        color="white"
                                     />
                                 </button>
                             </DropdownMenuTrigger>
 
                             <DropdownMenuContent
-                                className=" bg-white mr-1 mt-3 w-56 rounded-2xl p-2 shadow-2xl backdrop-blur-md"
+                                className=" bg-secondary mr-1 mt-3 w-56 rounded-2xl p-2 shadow-2xl backdrop-blur-md"
                                 align="end"
                                 side="bottom"
                                 onCloseAutoFocus={(e) => e.preventDefault()}>
